@@ -1,0 +1,25 @@
+---
+title: "Two forms of pre-rendering"
+date: "2023-3-14"
+tags: ["next.js", "next.js"]
+---
+
+Next.js has two forms of pre-rendering: **Static Generation** and
+**Server Side Rendering**. The difference is in **when** it generates
+the HTML for a page.
+
+```ts
+const sum = (num1: number, num2: number): number => {
+  return num1 + num2;
+};
+console.log(sum(4, 8)); //12
+```
+
+-**Static Generation** is the pre-rendering method that generates the
+HTML at **Build time**. The pre-rendered HTML is then _reused_ on each
+request. -**Server Side Rendering** is the pre-rendering method that generates
+the HTML on **each request**.
+
+Importantly, next.js let you **choose** witch pre-rendering form to use
+for each page. You can create a "hybrid" next.js app by using static
+generation for most pages and using server side rendering for others.
